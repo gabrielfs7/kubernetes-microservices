@@ -60,16 +60,25 @@ You can get the services IPs for accessing through the browser by typing (change
 $ microservices % minikube service voting-service --url
 ```
 
-### To vote
+### Casting a vote
 
 ```shell script
 $ minikube service voting-service --url 
 http://192.168.99.100:30004
 ```
 
-### To get the results
+Open the URL in the Browser and will se something like this:
+
+![Appl model](./votes.png)
+
+### Getting the results
 
 ```shell script
 $ minikube service result-service --url
 http://192.168.99.100:30005
 ```
+
+Open the URL in the Browser and will se something like this:
+
+![Appl model](./results.png)
+

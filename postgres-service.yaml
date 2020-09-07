@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  #
+  # The name MUST be "db", cause is used for connection inside application
+  #
+  name: db
+  labels:
+    name: postgres-service
+    app: demo-voting-app
+spec:
+  ports:
+    - port: 5432
+      targetPort: 5432
+  selector:
+    #
+    # Must match with postgres-pod.yaml POD labels
+    #
+    name: postgres-pod
+    app: demo-voting-app
